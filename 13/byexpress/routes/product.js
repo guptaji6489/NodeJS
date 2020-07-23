@@ -8,7 +8,7 @@ router.get("/", function (req, res, next) {
   db.query(query, function (err, rows, fields) {
     if (err) throw err;
     // res.json(rows);
-    res.render("product", { title: "Products", product: rows });
+    res.render("product", { title: "Details", product: rows });
   });
 });
 
