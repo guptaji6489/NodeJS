@@ -1,5 +1,8 @@
-<h1>{{title}}</h1>
-
+<div class="container">
+  <h1>CRUD Operations by Guptaji</h1>
+  <h2>{{title}}</h2>
+  <a href="/product/create-form" class="btn btn-success">Create Product</a>
+  <br /><br />
 <table class="table">
     <tr>
         <th>id</th>
@@ -15,6 +18,13 @@
         <td>{{this.name}}</td>
         <td>{{this.city}}</td>
         <td>{{this.standard}}</td>
+        <td>
+            <a href="/product/edit-form/{{this.id}}" class="btn btn-info btn-sm">Edit</a>
+            <a href="/product/delete/{{this.id}}" class="btn btn-danger btn-sm">Delete</a>
+        </td>
     </tr>
     {{/each}}
 </table>
+
+
+</div>

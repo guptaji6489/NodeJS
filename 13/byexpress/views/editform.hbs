@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  <hr />
+  <div class="row">
+    <div class="col-md-6">
+      <form action="/product/edit/{{product.id}}" method="post">
+          <div class="form-group">
+              <input type="text" name="product_name" class="form-control" value={{product.rollno}} placeholder="Product Name" />
+          </div>
+          <div class="form-group">
+              <input type="text" name="sku" class="form-control" value={{product.name}} placeholder="SKU" />
+          </div>
+          <div class="form-group">
+              <input type="text" name="price" class="form-control" value={{product.city}} placeholder="Price" />
+          </div>
+          <div class="form-group">
+              <input type="text" name="std" class="form-control" value={{product.standard}} placeholder="standard" />
+          </div>
+          <div class="form-group">
+              <button class="btn btn-info">Save Product</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
