@@ -20,11 +20,17 @@ router.get('/create', function(req, res, next) {
 
 /*single file upload*/
 router.post('/upload', upload.single('blogimage'), function(req, res, next) {
-  var fileinfo = req.file;
-  var title = req.body.title;
-  console.log(title);
-  res.send(fileinfo);
-})
-
-
+    var fileinfo = req.file;
+    var title = req.body.title;
+    console.log(title);
+    res.send(fileinfo);
+  })
+  
+  /*multiple files upload*/
+  router.post('/uploads', upload.array('blogimage', 5), function(req, res, next) {
+    var fileinfo = req.files;
+    var title = req.body.title;
+    console.log(title);
+    res.send(fileinfo);
+  })
 module.exports = router;
